@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name:  com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    jdbc-url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&serverTimezone=UTC
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    show-sql: true
+jedis:
+  host: 127.0.0.1
+  port: 6379
+  password: 123456
+  maxTotal: 100
+  maxIdle: 10
+  maxWaitMillis:  100000
